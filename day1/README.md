@@ -12,4 +12,33 @@
 
 <img src="login.png">
 
+### Terraform code 
+
+<img src="tf.png">
+
+### terraform providers
+
+<img src="pro.png">
+
+## Terraform lifecycle 
+
+### Init
+
+<img src="init.png">
+
+### Plan -- Dry-run -- preview 
+
+<img src="plan.png">
+
+### apply -- to run the code 
+
+<img src="apply.png">
+
+### Destroying Resources 
+
+<img src="destroy.png">
+
+
+
+
 
