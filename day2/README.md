@@ -28,6 +28,17 @@
 
 <img src="write.png">
 
+## terraform output 
+
+<img src="output.png">
+
+### checking state list 
+
+<img src="state1.png">
+
+## Understanding provisioner 
+
+<img src="prov.png">
 
 
 
