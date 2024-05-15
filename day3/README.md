@@ -16,3 +16,20 @@
 
 <img src="infra.png">
 
+## Intro to CICD process and tools 
+
+<img src="cicd.png">
+
+### Gitlab concepts
+
+<img src="gitlb1.png">
+
+## github Repo vs  gitlab project 
+
+<img src="repo-pro.png">
+
+## concept to stages in gitlab 
+
+<img src="stages.png">
+
+
