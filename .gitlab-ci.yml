@@ -1,0 +1,52 @@
+# defining stages -- we are defining sequence 
+stages:
+    - terraform_code_update_check
+    - terraform_code_run
+    - checking_ansible_connection
+    - deploy_apps_using_ansible
+# we are going to write jobs 
+ashu-job-pre-check:
+    stage: .pre
+    script:
+        - echo "checking az cli version "
+     #   - az version 
+        - echo "terraform version"
+      #  - terraform version 
+        - echo "checking azure connection"
+      #  - az resource lsit 
+        - echo "checking ansible version"
+       #   ansible version 
+ashu-codecheck-job:
+    stage: terraform_code_update_check
+    script:   # we can write those command / script whatever type of runner machine OS we have 
+        - pwd
+        - echo "hey we are just list code of terraform "
+        - ls 
+
+ashu-terraform-code-job:
+    stage: terraform_code_run
+    script:
+        - echo "lets run terraform code"
+        # - terraform init
+        # - terraform plan
+        # - terraform apply --auto-approve 
+        # - sleep 5 
+        # - terraform state list 
+        # - terraform output 
+ashu-ansible-test:
+    stage: checking_ansible_connection
+    script:
+        - echo "testing ansible connection to the resources created by terraform"
+        - ansible all -m ping 
+ashu-app-deploy:
+    stage: deploy_apps_using_ansible
+    script:
+        - echo "deploying apps using ansible"
+      #  - ansible-playbook playbooks/deploy.yml
+
+ashu-final-job:
+    stage: .post
+    script:
+        - echo "hello test passes"
+        - echo "destroying the resources"
+        - echo "sending email and ms teams notifications for success"
