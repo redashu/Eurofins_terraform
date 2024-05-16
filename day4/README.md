@@ -21,6 +21,25 @@
 
 <img src="ansible1.png">
 
+### ansible host components
+
+<img src="compo.png">
+
+### Installing ansible in ubuntu machine 
+
+<img src="install1.png">
+
+### checking ansible version 
+
+<img src="version22.png">
+
+### ansible commands
+
+<img src="cmd22.png">
+
+
+
+
 
 
 
