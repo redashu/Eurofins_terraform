@@ -13,6 +13,16 @@
 <img src="validate.png">
 
 
+## Intro to Ansible -- 
+
+<img src="ansible.png">
+
+### ansible arch 1 
+
+<img src="ansible1.png">
+
+
+
 
 
 
