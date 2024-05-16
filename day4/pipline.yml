@@ -1,0 +1,36 @@
+# job to test which user my runner is using
+stages: # defining stages
+  - ashu-terraform-need
+  - ashu-terraform-code-validate
+  - ashu-terraform-code-execture
+ashu-job-test:
+  stage: ashu-terraform-need  # using stage
+  tags:
+  - ashu_terraform_windows
+  script:
+    - whoami
+    - systeminfo 
+    - az version 
+   # - C:\Users\Administrator\Downloads\terraform.exe version 
+    - terraform version 
+   # - az login --use-device-code # only time we have to active
+    - az resource list  # checking is pipeline user gonna connect azure ?
+
+ashu-job-to-validate:
+  stage: ashu-terraform-code-validate
+  tags:
+    - ashu_terraform_windows
+  script:
+    - ls  # verify code is there 
+    - terraform init 
+    - terraform validate  # to validate code of terraform 
+  
+ashu-job-to-infra-create:
+  stage: ashu-terraform-code-execture
+  tags:
+    - ashu_terraform_windows
+  script: 
+    - terraform init 
+    - terraform plan 
+    - terraform apply --auto-approve
+    - terraform state list 
