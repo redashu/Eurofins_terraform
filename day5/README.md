@@ -21,4 +21,13 @@
 
 <img src="azd.png">
 
+### service account concept in az devops 
+
+<img src="svc1.png">
+
+
+
+### checkibng ansible-playbook
+
+<img src="play1.png">
 
